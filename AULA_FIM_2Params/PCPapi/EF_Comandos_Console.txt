@@ -1,0 +1,24 @@
+//COMANDOS NO VISUAL STUDIO->
+//Comando para criar a Migração:
+
+Add-Migration {MigrationName}
+Add-Migration {MigrationName} -Context {ApplicationDbContext} 
+//Exemplo:
+Add-Migration MinhaPrimeiraMigration
+
+//Comando para aplicar a Migração
+Update-Database
+
+
+//COMANDOS NO VS CODE->
+//Comando para criar a Migração:
+dotnet ef migrations add {MigrationName}
+//Exemplo:
+dotnet ef migrations add MinhaPrimeiraMigration
+
+//Comando para aplicar a Migração
+dotnet ef database update
+
+
+
+

@@ -22,10 +22,8 @@ namespace GenericController_ini.Controllers
 
         public GenericController(DbAplication context)
         {
-
             _context = context;
             _dbSet = context.Set<TEntity>();
-
         }
 
         [HttpGet]

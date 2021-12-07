@@ -11,9 +11,11 @@ namespace GenericController_ini.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GaragemController : GenericController<Garagem,int>
+    public class MateriaPrimaController : GenericController<MateriaPrima,int>
     {
-        public GaragemController(DbAplication context) : base(context) { }
-
+        public MateriaPrimaController(DbAplication context) : base(context) 
+        {
+            
+        }
     }
 }

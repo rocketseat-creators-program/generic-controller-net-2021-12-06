@@ -16,8 +16,6 @@ namespace GenericController
         public DbSet<Funcionario> Funcionarios { get; set; }
         public DbSet<Garagem> Garagens { get; set; }
         public DbSet<Veiculo> Veiculos { get; set; }
-
-
         #endregion
         public DbAplication()
         {

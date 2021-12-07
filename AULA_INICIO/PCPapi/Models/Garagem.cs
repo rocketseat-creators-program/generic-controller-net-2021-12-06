@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenericController.Models
 {
-    public class Garagem : IEntity
+    public class Garagem : IEntity<int>
     {
         public int Id { get; set; }
         public string Bloco { get; set; }

@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace GenericController.Models
 {
-    public class Funcionario : IEntity
-    {   
-     
+    public class Funcionario : IEntity<int>
+    {        
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cargo { get; set; }

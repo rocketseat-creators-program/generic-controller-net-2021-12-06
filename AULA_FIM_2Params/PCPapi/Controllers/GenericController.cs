@@ -14,7 +14,7 @@ using GenericController;
 
 namespace GenericController_ini.Controllers
 {
-    public class GenericController<TEntity,Tid> : ControllerBase where TEntity : class, IEntity<Tid>
+    public class GenericController<TEntity,Tid>: ControllerBase where TEntity:class,IEntity<Tid>
     {
 
         protected DbAplication _context { get; set; }
@@ -22,26 +22,22 @@ namespace GenericController_ini.Controllers
 
         public GenericController(DbAplication context)
         {
-
             _context = context;
             _dbSet = context.Set<TEntity>();
-
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<TEntity>>> Get()
+        public virtual async Task<ActionResult<List<TEntity>>> Get()
         {
             return await _dbSet.ToListAsync();
         }
-        
+
         [HttpGet("{id}")]
         public virtual async Task<ActionResult<TEntity>> Get(Tid id)
         {
             var item = await _dbSet.FirstAsync(x => x.Id.Equals(id));
 
-
             if (item == null) { return NotFound(); }
-
             return item;
         }
 
@@ -63,7 +59,7 @@ namespace GenericController_ini.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(Tid id)
+        public virtual async Task<ActionResult> Delete(Tid id)
         {
             var itemToRemove = await _dbSet.FirstOrDefaultAsync(x => x.Id.Equals(id));
             if (itemToRemove == null)
@@ -73,8 +69,9 @@ namespace GenericController_ini.Controllers
 
             _context.Remove(itemToRemove);
             await _context.SaveChangesAsync();
-            return Ok("Item ("+id+"): Excluido com sucesso");
+            return Ok("Item (" + id + "): Excluido com sucesso");
         }
+
     }
     
 }

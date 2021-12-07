@@ -13,9 +13,7 @@ namespace GenericController_ini.Controllers
     [ApiController]
     public class GaragemController : GenericController<Garagem,int>
     {
-        public GaragemController(DbAplication context) : base(context)
-        {
-            // A palavra é prata, o silêncio é ouro
-        }
+        public GaragemController(DbAplication context) : base(context) { }
+
     }
 }

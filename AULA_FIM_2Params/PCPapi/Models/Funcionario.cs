@@ -9,12 +9,8 @@ using System.Threading.Tasks;
 namespace GenericController.Models
 {
     public class Funcionario : IEntity<int>
-    {   
-        [NotMapped]
-        public int Id { get { return this.Matricula; } set { this.Matricula = value; } }
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Matricula { get; set; }
+    {        
+        public int Id { get; set; }
         public string Nome { get; set; }
         public string Cargo { get; set; }
         public string Documento { get; set; }

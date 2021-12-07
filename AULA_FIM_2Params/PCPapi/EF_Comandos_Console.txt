@@ -1,6 +1,6 @@
 //COMANDOS NO VISUAL STUDIO->
-//Comando para criar a Migração:
 
+//Comando para criar a Migração:
 Add-Migration {MigrationName}
 Add-Migration {MigrationName} -Context {ApplicationDbContext} 
 //Exemplo:
@@ -11,6 +11,7 @@ Update-Database
 
 
 //COMANDOS NO VS CODE->
+
 //Comando para criar a Migração:
 dotnet ef migrations add {MigrationName}
 //Exemplo:

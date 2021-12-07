@@ -29,7 +29,7 @@ namespace GenericController
         public void ConfigureServices(IServiceCollection services)
         { 
             services.AddDbContext<DbAplication>(options =>
-            options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
+             options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
                                ServerVersion.AutoDetect(Configuration.GetConnectionString("DefaultConnection"))));
             services.AddControllers();
             services.AddRazorPages();

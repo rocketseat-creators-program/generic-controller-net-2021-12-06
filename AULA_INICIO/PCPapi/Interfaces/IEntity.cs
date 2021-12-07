@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace GenericController.Interfaces
 {
-    public interface IEntity<T>
+    public interface IEntity
     {
-        T Id { get; set; }
+        int Id { get; set; }
     }
 }

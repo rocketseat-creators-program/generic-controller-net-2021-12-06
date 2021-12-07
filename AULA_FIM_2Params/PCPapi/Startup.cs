@@ -27,10 +27,9 @@ namespace GenericController
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            
+        { 
             services.AddDbContext<DbAplication>(options =>
-             options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
+            options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
                                ServerVersion.AutoDetect(Configuration.GetConnectionString("DefaultConnection"))));
             services.AddControllers();
             services.AddRazorPages();
@@ -64,7 +63,7 @@ namespace GenericController
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();                       
+                endpoints.MapControllers();                           
             });
         }
     }

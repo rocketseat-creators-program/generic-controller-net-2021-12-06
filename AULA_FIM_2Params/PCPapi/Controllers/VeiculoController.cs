@@ -11,12 +11,9 @@ namespace GenericController_ini.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class VeiculoController : GenericController<Veiculo, string>
+    public class VeiculoController : GenericController<Veiculo,string>
     {
-        public VeiculoController(DbAplication context) : base(context)
-        {
-            // A palavra é prata, o silêncio é ouro
-        }
+        public VeiculoController(DbAplication context): base(context) { }
 
     }
 }

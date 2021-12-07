@@ -13,9 +13,6 @@ namespace GenericController_ini.Controllers
     [ApiController]
     public class FuncionarioController : GenericController<Funcionario,int>
     {
-        public FuncionarioController(DbAplication context) : base(context)
-        {
-            // A palavra é prata, o silêncio é ouro
-        }
+        public FuncionarioController(DbAplication context) : base(context) { }
     }
 }

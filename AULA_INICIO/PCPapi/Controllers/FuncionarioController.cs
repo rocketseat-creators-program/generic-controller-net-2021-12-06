@@ -1,6 +1,4 @@
-﻿using GenericController;
-using GenericController.Models;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,8 +9,7 @@ namespace GenericController_ini.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FuncionarioController : GenericController<Funcionario,int>
+    public class FuncionarioController : ControllerBase
     {
-        public FuncionarioController(DbAplication context) : base(context) { }
     }
 }
